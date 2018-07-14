@@ -293,3 +293,35 @@ var patternEagle = {};
     patternEagle.allowLimit = false;
     patternEagle.index = 0;
     patternEagle.indexAscending = true;
+
+var patternDiagonalTopLeft = {};
+		patternDiagonalTopLeft.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }  ];
+    patternDiagonalTopLeft.maxLength = patternDiagonalTopLeft.coords.length;
+    patternDiagonalTopLeft.currentLength = 0;
+    patternDiagonalTopLeft.allowLimit = true;
+    patternDiagonalTopLeft.index = 0;
+    patternDiagonalTopLeft.indexAscending = true;
+
+var patternDiagonalTopRight = {};
+		patternDiagonalTopRight.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 } , { x:1, y:0 }, { x:0, y:-1 }   ];
+    patternDiagonalTopRight.maxLength = patternDiagonalTopRight.coords.length;
+    patternDiagonalTopRight.currentLength = 0;
+    patternDiagonalTopRight.allowLimit = true;
+    patternDiagonalTopRight.index = 0;
+    patternDiagonalTopRight.indexAscending = true;
+
+var patternDiagonalBottomLeft = {};
+		patternDiagonalBottomLeft.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }  ];
+    patternDiagonalBottomLeft.maxLength = patternDiagonalBottomLeft.coords.length;
+    patternDiagonalBottomLeft.currentLength = 0;
+    patternDiagonalBottomLeft.allowLimit = true;
+    patternDiagonalBottomLeft.index = 0;
+    patternDiagonalBottomLeft.indexAscending = true;
+
+var patternDiagonalBottomRight = {};
+		patternDiagonalBottomRight.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }  ];
+    patternDiagonalBottomRight.maxLength = patternDiagonalBottomRight.coords.length;
+    patternDiagonalBottomRight.currentLength = 0;
+    patternDiagonalBottomRight.allowLimit = true;
+    patternDiagonalBottomRight.index = 0;
+    patternDiagonalBottomRight.indexAscending = true;
