@@ -69,3 +69,11 @@ var patternLineLeft = {};
     patternLineLeft.allowLimit = true;
     patternLineLeft.index = 0;
     patternLineLeft.indexAscending = false;
+
+var patternLineRight = {};
+    patternLineRight.coords = [ { x:1, y:0 } ];
+    patternLineRight.maxLength = Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) ) / 2;
+    patternLineRight.currentLength = 0;
+    patternLineRight.allowLimit = true;
+    patternLineRight.index = 0;
+    patternLineRight.indexAscending = false;
