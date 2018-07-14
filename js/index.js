@@ -534,3 +534,310 @@ function drawLine( command, position ) {
   posHolder = newArrayPositionObject.position;
 
 };
+
+//---
+
+function getCanvasPosition( position ) {
+
+	return { x:position.x * ( LINE_WIDTH + LINE_DISTANCE ) + LINE_WIDTH, y:position.y * ( LINE_WIDTH + LINE_DISTANCE ) + LINE_WIDTH };
+
+};
+
+function getRandomStartPos() {
+
+	var x = Math.floor( Math.random() * lineHolder.length );
+  var y = Math.floor( Math.random() * lineHolder[ 0 ].length );
+
+	return { x:x, y:y };
+
+};
+
+function getRandomDir( position ) {
+
+	var newPositionObject = {};
+	var newPositions = [];
+
+	if (!patternCurrent) {
+
+  	setRandomPattern();
+
+  }
+
+  //console.log( patternCurrent );
+
+  if ( patternCurrent === patternRandom ) {
+
+  	if ( position.x - 1 > -1 && position.x - 1 < lineHolderWidth && lineHolder[ position.x - 1 ][ position.y ] === 0 ) {
+
+      newPositions.push( { x:position.x - 1, y:position.y } );
+
+    }
+
+    if ( position.x + 1 > -1 && position.x + 1 < lineHolderWidth && lineHolder[ position.x + 1 ][ position.y ] === 0 ) {
+
+      newPositions.push( { x:position.x + 1, y:position.y } );
+
+    }
+
+    if ( position.y - 1 > -1 && position.y - 1 < lineHolderHeight && lineHolder[ position.x ][ position.y - 1 ] === 0 ) {
+
+      newPositions.push( { x:position.x, y:position.y - 1 } );
+
+    }
+
+    if ( position.y + 1 > -1 && position.y + 1 < lineHolderHeight && lineHolder[ position.x ][ position.y + 1 ] === 0 ) {
+
+      newPositions.push( { x:position.x, y:position.y + 1 } );
+
+    }
+
+  } else {
+
+  	var p;
+
+    if ( patternCurrent.indexAscending ) {
+
+    	p = patternCurrent.coords[ patternCurrent.index ];
+
+    } else {
+
+    	p = patternCurrent.coords[ 0 ];
+
+    }
+
+    //patternCurrent.position.x += position.x + p.x;
+    //patternCurrent.position.y += position.y + p.x;
+
+    if ( position.x + p.x > -1 && position.x + p.x < lineHolderWidth && position.y + p.y > -1 && position.y + p.y < lineHolderHeight && lineHolder[ position.x + p.x ][ position.y + p.y ] === 0 ) {
+
+      newPositions.push( { x:position.x + p.x, y:position.y + p.y } );
+
+    }
+
+  }
+
+  patternCurrent.index++;
+
+  if ( patternCurrent.index === patternCurrent.currentLength ) {
+
+    patternCurrent.index = 0;
+    patternCurrent.currentLength = 0;
+  	patternCurrent = null;
+
+    tidyUpPatterns();
+
+  }
+
+  if ( newPositions.length === 0 ) {
+
+    newPositionObject.draw = false;
+
+    if ( halftime ) {
+
+      newPositionObject.position = getPosNearBy( position, lineHolder.length * lineHolder[ 0 ].length );
+
+    } else {
+
+    	newPositionObject.position = getPosRandomly( position, lineHolder.length * lineHolder[ 0 ].length );
+
+    }
+
+  } else {
+
+  	newPositionObject.draw = true;
+
+    if ( newPositions.length === 1 ) {
+
+    	newPositionObject.position = newPositions[ 0 ];
+
+    } else if ( newPositions.length > 1 ) {
+
+      newPositionObject.position = newPositions[ Math.floor( Math.random() * newPositions.length ) ];
+
+    }
+
+  }
+
+  lineHolder[ newPositionObject.position.x ][ newPositionObject.position.y ] = 1;
+
+  return newPositionObject;
+
+};
+
+function getPosRandomly( position ) {
+
+	var newPositions = [];
+
+  for ( var x = 0; x < lineHolderWidth; x++ ) {
+
+    for ( var y = 0; y < lineHolderHeight; y++ ) {
+
+      if ( lineHolder[ x ][ y ] === 0 ) {
+
+      	newPositions.push( { x:x, y:y } );
+
+      }
+
+    }
+
+  }
+
+  return newPositions[ Math.floor( Math.random() * newPositions.length ) ];
+
+};
+
+function getPosNearBy( position, maxRadius = 100 ) {
+
+	for ( var radius = 1; radius < maxRadius; radius++ ) {
+
+  	var newPositions = [];
+
+  	var xs = position.x - radius;
+    var ys = position.y - radius;
+    var xe = position.x + radius;
+    var ye = position.y + radius;
+
+    for ( var x = xs; x < xe; x++ ) {
+
+      for ( var y = ys; y < ye; y++ ) {
+
+        if ( x > -1 && x < lineHolderWidth && y > -1 && y < lineHolderHeight && lineHolder[ x ][ y ] === 0 ) {
+
+          newPositions.push( { x:x, y:y } );
+
+        }
+
+      }
+
+    }
+
+    if ( newPositions.length === 1 ) {
+
+    	return newPositions[ 0 ];
+
+    } else if ( newPositions.length > 1 ) {
+
+      return newPositions[ Math.floor( Math.random() * newPositions.length ) ];
+
+    }
+
+  }
+
+};
+
+//---
+
+function setRandomPattern() {
+
+	if ( halftime ) {
+
+		patternCurrent = patternRandom;
+
+  } else {
+
+  	patternCurrent = patterns[ Math.floor( Math.random() * patterns.length ) ];
+
+  }
+
+  if ( patternCurrent.allowLimit ) {
+
+  	patternCurrent.currentLength = Math.floor( Math.random() * ( patternCurrent.maxLength - 5 ) ) + 5;//min length 5
+
+  } else {
+
+  	patternCurrent.currentLength = patternCurrent.maxLength;
+
+  }
+
+};
+
+function tidyUpPatterns() {
+
+	for ( var i = 0; i < patterns.length; i++ ) {
+
+		var pattern = patterns[ i ];
+    		pattern.index = 0;
+        pattern.currentLength = 0;
+
+  }
+
+};
+
+//---
+
+function createCanvas( width, height, containerId ) {
+
+  var canvas = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
+      canvas.setAttribute( 'width', width );
+      canvas.setAttribute( 'height', height );
+   		canvas.setAttribute( 'shape-rendering', SHAPE_RENDERING );
+
+  var container = document.getElementById( containerId );
+  		container.appendChild( canvas );
+
+  return canvas;
+
+};
+
+function createRect( x, y, width, height, color ) {
+
+  var rect = document.createElementNS( 'http://www.w3.org/2000/svg', 'rect' );
+  		rect.setAttribute( 'x', x );
+      rect.setAttribute( 'y', y );
+      rect.setAttribute( 'width', width );
+      rect.setAttribute( 'height', height );
+      rect.setAttribute( 'fill', color );
+
+  return rect;
+
+};
+
+function createPath( color, w, lineCap ) {
+
+	var path = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
+  		path.setAttribute( 'd', '' );
+  		path.setAttribute( 'stroke', color );
+      path.setAttribute( 'stroke-width', w );
+      path.setAttribute( 'stroke-linecap', lineCap );
+      path.setAttribute( 'fill', 'transparent' );
+
+  return path;
+
+};
+
+function changePath( command, position ) {
+
+	pathCoordinates += command + ' ' + position.x + ' ' + position.y + ' ';
+  path.setAttribute( 'd', pathCoordinates );
+
+};
+
+function closePath() {
+
+	pathCoordinates += 'Z';
+  path.setAttribute( 'd', pathCoordinates );
+
+};
+
+//---
+
+function getRGBColor( color ) {
+
+  var r = Math.sin( color.r += COLOR_CICLE_SPEED_R ) * 128 + 127;
+  var g = Math.sin( color.g += COLOR_CICLE_SPEED_G ) * 128 + 127;
+  var b = Math.sin( color.b += COLOR_CICLE_SPEED_B ) * 128 + 127;
+
+  //return 'rgb(' + r + ',' + g + ',' + b + ')';
+  return clampColor( r, g, b, COLOR_BRIGHTNESS_MIN, COLOR_BRIGHTNESS_MAX );
+
+};
+
+function clampColor( cr, cg, cb, min, max ) {
+
+  var r = Math.floor( Math.min( Math.max( min, cr ), max ) );
+  var g = Math.floor( Math.min( Math.max( min, cg ), max ) );
+  var b = Math.floor( Math.min( Math.max( min, cb ), max ) );
+
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
+
+};
