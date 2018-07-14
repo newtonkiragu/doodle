@@ -43,3 +43,13 @@ var btSavePNG;
 var btRestart;
 
 var color = {};
+
+//---
+
+var patternLineTop = {};
+		patternLineTop.coords = [ { x:0, y:-1 } ];
+    patternLineTop.maxLength = Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) ) / 2;
+    patternLineTop.currentLength = 0;
+    patternLineTop.allowLimit = true;
+    patternLineTop.index = 0;
+    patternLineTop.indexAscending = false;
