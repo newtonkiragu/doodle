@@ -213,3 +213,27 @@ var patternHorseshoeUp3x3 = {};
     patternHorseshoeUp3x3.allowLimit = true;
     patternHorseshoeUp3x3.index = 0;
     patternHorseshoeUp3x3.indexAscending = true;
+
+var patternHorseshoeDown3x3 = {};
+    patternHorseshoeDown3x3.coords = [ { x:0, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 } ];
+    patternHorseshoeDown3x3.maxLength = patternHorseshoeDown3x3.coords.length;
+    patternHorseshoeDown3x3.currentLength = 0;
+    patternHorseshoeDown3x3.allowLimit = true;
+    patternHorseshoeDown3x3.index = 0;
+    patternHorseshoeDown3x3.indexAscending = true;
+
+var patternHorseshoeLeft3x3 = {};
+    patternHorseshoeLeft3x3.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 } ];
+    patternHorseshoeLeft3x3.maxLength = patternHorseshoeLeft3x3.coords.length;
+    patternHorseshoeLeft3x3.currentLength = 0;
+    patternHorseshoeLeft3x3.allowLimit = true;
+    patternHorseshoeLeft3x3.index = 0;
+    patternHorseshoeLeft3x3.indexAscending = true;
+
+var patternHorseshoeRight3x3 = {};
+    patternHorseshoeRight3x3.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 } ];
+    patternHorseshoeRight3x3.maxLength = patternHorseshoeRight3x3.coords.length;
+    patternHorseshoeRight3x3.currentLength = 0;
+    patternHorseshoeRight3x3.allowLimit = true;
+    patternHorseshoeRight3x3.index = 0;
+    patternHorseshoeRight3x3.indexAscending = true;
