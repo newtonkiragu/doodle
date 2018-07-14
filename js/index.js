@@ -53,3 +53,11 @@ var patternLineTop = {};
     patternLineTop.allowLimit = true;
     patternLineTop.index = 0;
     patternLineTop.indexAscending = false;
+
+var patternLineDown = {};
+		patternLineDown.coords = [ { x:0, y:1 } ];
+    patternLineDown.maxLength = Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) ) / 2;
+    patternLineDown.currentLength = 0;
+    patternLineDown.allowLimit = true;
+    patternLineDown.index = 0;
+    patternLineDown.indexAscending = false;
