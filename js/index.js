@@ -494,3 +494,43 @@ function checkEnd() {
   return true;
 
 };
+
+//---
+
+function drawLine( command, position ) {
+
+	var oldArrayPosition = position;
+  var newArrayPositionObject = getRandomDir( oldArrayPosition );
+
+  var newCanvasPosition = getCanvasPosition( newArrayPositionObject.position );
+
+  if ( newArrayPositionObject.draw ) {
+
+  	if ( command === 'M' ) {
+
+
+
+    	changePath( command, getCanvasPosition( oldArrayPosition ) );
+      changePath( 'L', newCanvasPosition );
+
+    } else if ( command === 'L' ) {
+
+      changePath( command, newCanvasPosition );
+
+    }
+
+	} else {
+
+  	pathCoordinates = '';
+  	path = createPath( getRGBColor( color ), LINE_WIDTH, LINE_CAP );
+
+  	canvas.appendChild( path );
+
+  	changePath( 'M', newCanvasPosition );
+    changePath( command, newCanvasPosition );
+
+  }
+
+  posHolder = newArrayPositionObject.position;
+
+};
