@@ -149,6 +149,31 @@ var patternHorseshoeUp1x1 = {};
     patternHorseshoeUp1x1.allowLimit = false;
     patternHorseshoeUp1x1.index = 0;
     patternHorseshoeUp1x1.indexAscending = true;
+
+var patternHorseshoeDown1x1 = {};
+    patternHorseshoeDown1x1.coords = [ { x:0, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 } ];
+    patternHorseshoeDown1x1.maxLength = patternHorseshoeDown1x1.coords.length;
+    patternHorseshoeDown1x1.currentLength = 0;
+    patternHorseshoeDown1x1.allowLimit = false;
+    patternHorseshoeDown1x1.index = 0;
+    patternHorseshoeDown1x1.indexAscending = true;
+
+var patternHorseshoeLeft1x1 = {};
+    patternHorseshoeLeft1x1.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 } ];
+    patternHorseshoeLeft1x1.maxLength = patternHorseshoeLeft1x1.coords.length;
+    patternHorseshoeLeft1x1.currentLength = 0;
+    patternHorseshoeLeft1x1.allowLimit = false;
+    patternHorseshoeLeft1x1.index = 0;
+    patternHorseshoeLeft1x1.indexAscending = true;
+
+var patternHorseshoeRight1x1 = {};
+    patternHorseshoeRight1x1.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 } ];
+    patternHorseshoeRight1x1.maxLength = patternHorseshoeRight1x1.coords.length;
+    patternHorseshoeRight1x1.currentLength = 0;
+    patternHorseshoeRight1x1.allowLimit = false;
+    patternHorseshoeRight1x1.index = 0;
+    patternHorseshoeRight1x1.indexAscending = true;
+
 var patternHorseshoeUp2x2 = {};
     patternHorseshoeUp2x2.coords = [ { x:0, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 } ];
     patternHorseshoeUp2x2.maxLength = patternHorseshoeUp2x2.coords.length;
