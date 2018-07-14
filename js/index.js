@@ -357,3 +357,50 @@ var patternZigZagRight2x1 = {};
     patternZigZagRight2x1.allowLimit = true;
     patternZigZagRight2x1.index = 0;
     patternZigZagRight2x1.indexAscending = true;
+
+var patterns = [
+
+	patternLineTop,
+  patternLineDown,
+  patternLineLeft,
+  patternLineRight,
+  patternRandom,
+  patternSpiralLeft,
+  patternSpiralRight,
+  patternSquare3x3,
+  patternCross1x1,
+  patternCross2x2,
+  patternCross3x3,
+  patternCross4x4,
+  patternHorseshoeUp1x1,
+  patternHorseshoeDown1x1,
+  patternHorseshoeLeft1x1,
+  patternHorseshoeRight1x1,
+  patternHorseshoeUp2x2,
+  patternHorseshoeDown2x2,
+  patternHorseshoeLeft2x2,
+  patternHorseshoeRight2x2,
+  patternHorseshoeUp3x3,
+  patternHorseshoeDown3x3,
+  patternHorseshoeLeft3x3,
+  patternHorseshoeRight3x3,
+  patternZigZagTop1x1,
+  patternZigZagDown1x1,
+  patternZigZagLeft1x1,
+  patternZigZagRightt1x1,
+  patternSpiralRightXL,
+  patternSpiralLeftXXL,
+  patternEagle,
+  patternDiagonalTopLeft,
+  patternDiagonalTopRight,
+  patternDiagonalBottomLeft,
+  patternDiagonalBottomRight,
+  patternZigZagTop2x2,
+  patternZigZagLeft2x2,
+  patternZigZagTop2x1,
+  patternZigZagRight2x1
+
+];
+
+var patternCurrent;
+
