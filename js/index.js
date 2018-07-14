@@ -237,3 +237,35 @@ var patternHorseshoeRight3x3 = {};
     patternHorseshoeRight3x3.allowLimit = true;
     patternHorseshoeRight3x3.index = 0;
     patternHorseshoeRight3x3.indexAscending = true;
+
+var patternZigZagTop1x1 = {};
+    patternZigZagTop1x1.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:-1 } ];
+    patternZigZagTop1x1.maxLength = patternZigZagTop1x1.coords.length;
+    patternZigZagTop1x1.currentLength = 0;
+    patternZigZagTop1x1.allowLimit = true;
+    patternZigZagTop1x1.index = 0;
+    patternZigZagTop1x1.indexAscending = true;
+
+var patternZigZagDown1x1 = {};
+    patternZigZagDown1x1.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:1 }  ];
+    patternZigZagDown1x1.maxLength = patternZigZagDown1x1.coords.length;
+    patternZigZagDown1x1.currentLength = 0;
+    patternZigZagDown1x1.allowLimit = true;
+    patternZigZagDown1x1.index = 0;
+    patternZigZagDown1x1.indexAscending = true;
+
+var patternZigZagLeft1x1 = {};
+    patternZigZagLeft1x1.coords = [ { x:0, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:0, y:1 }, { x:-1, y:0 } ];
+    patternZigZagLeft1x1.maxLength = patternZigZagLeft1x1.coords.length;
+    patternZigZagLeft1x1.currentLength = 0;
+    patternZigZagLeft1x1.allowLimit = true;
+    patternZigZagLeft1x1.index = 0;
+    patternZigZagLeft1x1.indexAscending = true;
+
+var patternZigZagRightt1x1 = {};
+    patternZigZagRightt1x1.coords = [ { x:0, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:1, y:0 } ];
+    patternZigZagRightt1x1.maxLength = patternZigZagRightt1x1.coords.length;
+    patternZigZagRightt1x1.currentLength = 0;
+    patternZigZagRightt1x1.allowLimit = true;
+    patternZigZagRightt1x1.index = 0;
+    patternZigZagRightt1x1.indexAscending = true;
