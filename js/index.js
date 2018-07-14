@@ -77,3 +77,11 @@ var patternLineRight = {};
     patternLineRight.allowLimit = true;
     patternLineRight.index = 0;
     patternLineRight.indexAscending = false;
+
+var patternRandom = {};
+    patternRandom.coords = [ { x:0, y:0 } ];
+    patternRandom.maxLength = Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) );//15;//Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) ) * Math.floor( h / ( LINE_WIDTH + LINE_DISTANCE ) );
+    patternRandom.currentLength = 0;
+    patternRandom.allowLimit = true;
+    patternRandom.index = 0;
+    patternRandom.indexAscending = false;
