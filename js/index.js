@@ -101,3 +101,11 @@ var patternSpiralRight = {};
     patternSpiralRight.allowLimit = false;
     patternSpiralRight.index = 0;
     patternSpiralRight.indexAscending = true;
+
+var patternSquare3x3 = {};
+    patternSquare3x3.coords = [ { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 } ];
+    patternSquare3x3.maxLength = patternSquare3x3.coords.length;
+    patternSquare3x3.currentLength = 0;
+    patternSquare3x3.allowLimit = true;
+    patternSquare3x3.index = 0;
+    patternSquare3x3.indexAscending = true;
