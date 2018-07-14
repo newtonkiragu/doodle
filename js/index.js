@@ -467,3 +467,30 @@ function savePNG( svgEl, name ) {
 
 }
 
+function btRestartHandler( e ) {
+
+	restart();
+
+};
+
+//---
+
+function checkEnd() {
+
+	for ( var x = 0; x < lineHolderWidth; x++ ) {
+
+    for ( var y = 0; y < lineHolderHeight; y++ ) {
+
+      if ( lineHolder[ x ][ y ] === 0 ) {
+
+      	return false;
+
+      }
+
+    }
+
+  }
+
+  return true;
+
+};
