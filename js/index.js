@@ -269,3 +269,19 @@ var patternZigZagRightt1x1 = {};
     patternZigZagRightt1x1.allowLimit = true;
     patternZigZagRightt1x1.index = 0;
     patternZigZagRightt1x1.indexAscending = true;
+
+var patternSpiralLeftXXL = {};
+		patternSpiralLeftXXL.coords = [ { x:0, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }  ];
+    patternSpiralLeftXXL.maxLength = patternSpiralLeftXXL.coords.length;
+    patternSpiralLeftXXL.currentLength = 0;
+    patternSpiralLeftXXL.allowLimit = false;
+    patternSpiralLeftXXL.index = 0;
+    patternSpiralLeftXXL.indexAscending = true;
+
+var patternSpiralRightXL = {};
+		patternSpiralRightXL.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 } ];
+    patternSpiralRightXL.maxLength = patternSpiralRightXL.coords.length;
+    patternSpiralRightXL.currentLength = 0;
+    patternSpiralRightXL.allowLimit = false;
+    patternSpiralRightXL.index = 0;
+    patternSpiralRightXL.indexAscending = true;
