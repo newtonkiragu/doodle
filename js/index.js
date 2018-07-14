@@ -404,6 +404,109 @@ var patterns = [
 
 var patternCurrent;
 
+//---
+
+function init() {
+
+	canvas = createCanvas( w , h , 'container' );
+
+	lineHolderWidth = Math.floor( w / ( LINE_WIDTH + LINE_DISTANCE ) );
+  lineHolderHeight = Math.floor( h / ( LINE_WIDTH + LINE_DISTANCE ) );
+
+	//---
+
+	restart();
+
+  //---
+
+  btSaveSVG = document.getElementById( 'btSaveSVG' );
+  btSaveSVG.addEventListener( 'mousedown', btSaveSVGHandler, false );
+
+  btSavePNG = document.getElementById( 'btSavePNG' );
+  btSavePNG.addEventListener( 'mousedown', btSavePNGHandler, false );
+
+  btRestart = document.getElementById( 'btRestart' );
+  btRestart.addEventListener( 'mousedown', btRestartHandler, false );
+
+};
+
+//---
+
+function restart() {
+
+	if ( interval ) {
+
+  	clearInterval( interval );
+
+  }
+
+	canvas.innerHTML = '';
+
+	pathCoordinates = '';
+
+  color.r = Math.random() * ( Math.PI * 2 );
+  color.g = Math.random() * ( Math.PI * 2 );
+  color.b = Math.random() * ( Math.PI * 2 );
+
+  bg = createRect( 0, 0, w, h, BG_COLOR );
+
+  canvas.appendChild( bg );
+
+  path = createPath( getRGBColor( color ), LINE_WIDTH, LINE_CAP );
+
+  canvas.appendChild( path );
+
+	counter = 0;
+  halftime = false;
+
+	for ( var x = 0; x < lineHolderWidth; x++ ) {
+
+  	lineHolder[ x ] = [];
+
+    for ( var y = 0; y < lineHolderHeight; y++ ) {
+
+      lineHolder[ x ][ y ] = 0;
+
+    }
+
+  }
+
+  var newArrayPositionObject = getRandomDir( getRandomStartPos() );
+
+  drawLine( 'M', newArrayPositionObject.position );
+
+  interval = setInterval( function() {
+
+  	drawLine( 'L', posHolder );
+
+    counter++;
+
+    if ( counter > ( lineHolder.length * lineHolder[ 0 ].length ) / 2 ) {
+    //if ( counter > ( lineHolder.length * lineHolder[ 0 ].length ) - ( ( lineHolder.length * lineHolder[ 0 ].length ) / 4 ) ) {
+
+  		halftime = true;
+
+    }
+
+    if ( counter >= lineHolder.length * lineHolder[ 0 ].length - 2 ) {//-2 because of the line at the beginning
+
+    	console.log( 'checkEnd: ', checkEnd(), ' - ', counter, ' - ', lineHolder.length * lineHolder[ 0 ].length );
+
+    	if ( checkEnd() ) {
+
+      	clearInterval( interval );
+        closePath();
+
+      }
+
+    }
+
+  }, SPEED );
+
+};
+
+//---
+
 function btSaveSVGHandler( e ) {
 
 	saveSvg( canvas, 'Doodle.svg' );
@@ -841,3 +944,7 @@ function clampColor( cr, cg, cb, min, max ) {
   return 'rgb(' + r + ',' + g + ',' + b + ')';
 
 };
+
+//---
+
+init();
