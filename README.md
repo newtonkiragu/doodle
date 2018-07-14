@@ -1,5 +1,5 @@
 ## DOODLE
-A website to practice js through creating a canvas that draws an image based on zigzags, spirals and other lines
+A website to practice different types and formats of images through creating a canvas that draws an image based on zigzags, spirals and other lines 
 
 > Example image
 
