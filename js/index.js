@@ -428,3 +428,42 @@ function saveSvg( svgEl, name ) {
 
 }
 
+function btSavePNGHandler( e ) {
+
+	savePNG( canvas, 'Doodle.png' );
+
+};
+
+function savePNG( svgEl, name ) {
+
+  var img = document.createElement('img');
+
+	img.src = 'data:image/svg+xml;charset=utf-8,' + ( new XMLSerializer ).serializeToString( svgEl );
+  img.onload = function() {
+
+  	var canvas = document.createElement( 'canvas' );
+    		canvas.width = w;
+        canvas.height = h;
+
+    var context = canvas.getContext( '2d' );
+
+    context.drawImage( img, 0, 0 );
+
+    canvas.toBlob( function( pngBlob ) {
+
+      var pngUrl = URL.createObjectURL( pngBlob );
+
+      var downloadLink = document.createElement( 'a' );
+          downloadLink.href = pngUrl;
+          downloadLink.download = name;
+
+      document.body.appendChild( downloadLink );
+      downloadLink.click();
+      document.body.removeChild( downloadLink );
+
+  	} );
+
+  }
+
+}
+
