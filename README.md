@@ -2,7 +2,7 @@
 A website to practice js through creating a canvas that draws an image based on sigzags, spirals and other lines
 
 > Example image
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)]
+[![N|Solid](img/doodle.png)]
 
 ## LICENCE
 MIT
