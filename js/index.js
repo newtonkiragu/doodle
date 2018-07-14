@@ -109,3 +109,35 @@ var patternSquare3x3 = {};
     patternSquare3x3.allowLimit = true;
     patternSquare3x3.index = 0;
     patternSquare3x3.indexAscending = true;
+
+var patternCross1x1 = {};
+    patternCross1x1.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 } ];
+    patternCross1x1.maxLength = patternCross1x1.coords.length;
+    patternCross1x1.currentLength = 0;
+    patternCross1x1.allowLimit = false;
+    patternCross1x1.index = 0;
+    patternCross1x1.indexAscending = true;
+
+var patternCross2x2 = {};
+    patternCross2x2.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 } ];
+    patternCross2x2.maxLength = patternCross2x2.coords.length;
+    patternCross2x2.currentLength = 0;
+    patternCross2x2.allowLimit = false;
+    patternCross2x2.index = 0;
+    patternCross2x2.indexAscending = true;
+
+var patternCross3x3 = {};
+    patternCross3x3.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 } ];
+    patternCross3x3.maxLength = patternCross3x3.coords.length;
+    patternCross3x3.currentLength = 0;
+    patternCross3x3.allowLimit = false;
+    patternCross3x3.index = 0;
+    patternCross3x3.indexAscending = true;
+
+var patternCross4x4 = {};
+    patternCross4x4.coords = [ { x:0, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:1 }, { x:0, y:1 }, { x:0, y:1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:-1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:0, y:-1 }, { x:1, y:0 }, { x:1, y:0 }, { x:1, y:0 }, { x:0, y:1 }, { x:0, y:1 } ];
+    patternCross4x4.maxLength = patternCross4x4.coords.length;
+    patternCross4x4.currentLength = 0;
+    patternCross4x4.allowLimit = false;
+    patternCross4x4.index = 0;
+    patternCross4x4.indexAscending = true;
